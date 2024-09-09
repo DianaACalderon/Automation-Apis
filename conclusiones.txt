@@ -1,0 +1,117 @@
+1. Añadir una mascota a la tienda
+Este escenario se refiere a agregar una nueva mascota a la tienda usando el API.
+
+Entradas:
+URL del endpoint: /v2/pet
+Método HTTP: POST
+Datos (Payload)
+     {
+  "id": 188,
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "doggie188",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}
+Variables:
+id: Identificador único de la mascota
+name: Nombre de la mascota.
+status: Estado de la mascota
+
+
+Salidas esperadas:
+Código de estado HTTP: 200
+Cuerpo de respuesta
+
+Test:
+Verificación del código de estado: Debe ser 200.
+Verificación del cuerpo de respuesta: El id, name, y status deben coincidir con los datos enviados.
+
+
+
+
+2. Consultar la mascota ingresada previamente (Búsqueda por ID)
+En este escenario, se busca una mascota por su ID.
+
+Entradas:
+URL del endpoint: /v2/pet/{petId}
+Método HTTP: GET
+Parámetros:
+petId: El ID 188 de la mascota añadida previamente.
+Variables:
+petId: Identificador de la mascota que se busca.
+Salidas esperadas:
+Código de estado HTTP: 200
+Cuerpo de respuesta
+
+Test:
+Verificación del código de estado: Debe ser 200.
+Verificación del cuerpo de respuesta: Asegurarse que el id, name, y status correspondan a la mascota agregada.
+
+3. Actualizar el nombre de la mascota y el estatus de la mascota a “sold”
+Este caso implica actualizar los detalles de la mascota.
+
+Entradas:
+URL del endpoint: /v2/pet
+Método HTTP: PUT
+Datos (payload):
+{
+      "id": 188,
+      "category": {
+        "id": 0,
+        "name": "doggie188"
+      },
+      "name": "doggieDC88",
+      "photoUrls": [
+        "string"
+      ],
+      "tags": [
+        {
+          "id": 0,
+          "name": "doggieDC88"
+        }
+      ],
+      "status": "sold"
+    }
+
+Variables:
+id: El ID 188 de la mascota que se va a actualizar.
+name: El nuevo nombre de la mascota (doggieDC88).
+status: El nuevo estado de la mascota (sold).
+Salidas esperadas:
+Código de estado HTTP: 200
+Cuerpo de respuesta
+
+Test:
+Verificación del código de estado: Debe ser 200.
+Verificación del cuerpo de respuesta: Comprobar que el name y status fueron actualizados correctamente.
+
+
+
+4. Consultar la mascota modificada por estatus (Búsqueda por estatus)
+Este escenario implica buscar mascotas por su estatus, en este caso, las mascotas vendidas ("sold").
+
+Entradas:
+URL del endpoint: /v2/pet/findByStatus
+Método HTTP: GET
+Parámetros:
+status: "sold"
+Variables:
+status: El estado de la mascota que se quiere consultar (sold).
+Salidas esperadas:
+Código de estado HTTP: 200
+Cuerpo de respuesta
+
+Test:
+Verificación del código de estado: Debe ser 200.
+Verificación del cuerpo de respuesta: Asegurarse de que todas las mascotas en la respuesta tengan el campo status con el status"sold".

@@ -1,0 +1,660 @@
+00:19:28.029 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+00:19:29.970 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:19:30.430 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/22)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:19:31.374 [main] DEBUG com.intuit.karate - response time in milliseconds: 937
+1 < 200
+1 < Date: Thu, 29 Aug 2024 04:19:31 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":165,"category":{"id":65,"name":"Dog"},"name":"cat","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9223372016900014561,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"},{"id":9223372016900014635,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"},{"id":982129069,"name":"locust","status":"sold"}]
+
+00:19:31.494 [main] ERROR com.intuit.karate - classpath:examples/petstore/get_pet_by_status.feature:11
+And match each response == { status: 'sold' }
+match failed: EACH_EQUALS
+  $ | match each failed at index 0 (LIST:MAP)
+  [{"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":165,"category":{"id":65,"name":"Dog"},"name":"cat","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9223372016900014561,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"},{"id":9223372016900014635,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"},{"id":982129069,"name":"locust","status":"sold"}]
+  {"status":"sold"}
+
+    $[0] | not equal | actual has 5 more key(s) than expected - {"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}]} (MAP:MAP)
+    {"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"}
+    {"status":"sold"}
+
+
+classpath:examples/petstore/get_pet_by_status.feature:11
+00:19:47.119 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+00:19:49.003 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:19:49.463 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/22)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:19:50.162 [main] DEBUG com.intuit.karate - response time in milliseconds: 690
+1 < 200
+1 < Date: Thu, 29 Aug 2024 04:19:50 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":165,"category":{"id":65,"name":"Dog"},"name":"cat","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9223372016900014561,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"},{"id":9223372016900014635,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"},{"id":982129069,"name":"locust","status":"sold"}]
+
+00:19:50.266 [main] ERROR com.intuit.karate - classpath:examples/petstore/get_pet_by_status.feature:11
+And match each response == { status: 'sold' }
+match failed: EACH_EQUALS
+  $ | match each failed at index 0 (LIST:MAP)
+  [{"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":165,"category":{"id":65,"name":"Dog"},"name":"cat","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9223372016900014561,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"},{"id":9223372016900014635,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"},{"id":982129069,"name":"locust","status":"sold"}]
+  {"status":"sold"}
+
+    $[0] | not equal | actual has 5 more key(s) than expected - {"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}]} (MAP:MAP)
+    {"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"}
+    {"status":"sold"}
+
+
+classpath:examples/petstore/get_pet_by_status.feature:11
+00:23:07.451 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+00:23:09.337 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:23:09.798 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/22)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:23:10.592 [main] DEBUG com.intuit.karate - response time in milliseconds: 788
+1 < 200
+1 < Date: Thu, 29 Aug 2024 04:23:10 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":165,"category":{"id":65,"name":"Dog"},"name":"cat","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9223372016900014561,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"},{"id":9223372016900014635,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"},{"id":982129069,"name":"locust","status":"sold"}]
+
+00:23:10.693 [main] ERROR com.intuit.karate - classpath:examples/petstore/get_pet_by_status.feature:11
+And match each response == { status: 'sold' }
+match failed: EACH_EQUALS
+  $ | match each failed at index 0 (LIST:MAP)
+  [{"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":165,"category":{"id":65,"name":"Dog"},"name":"cat","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9223372016900014561,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"},{"id":9223372016900014635,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"},{"id":982129069,"name":"locust","status":"sold"}]
+  {"status":"sold"}
+
+    $[0] | not equal | actual has 5 more key(s) than expected - {"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}]} (MAP:MAP)
+    {"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"}
+    {"status":"sold"}
+
+
+classpath:examples/petstore/get_pet_by_status.feature:11
+00:24:35.840 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+00:24:37.676 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:24:38.190 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/22)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:24:38.923 [main] DEBUG com.intuit.karate - response time in milliseconds: 729
+1 < 200
+1 < Date: Thu, 29 Aug 2024 04:24:38 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":165,"category":{"id":65,"name":"Dog"},"name":"cat","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9223372016900014561,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"},{"id":9223372016900014635,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"},{"id":982129069,"name":"locust","status":"sold"}]
+
+00:24:39.017 [main] ERROR com.intuit.karate - classpath:examples/petstore/get_pet_by_status.feature:11
+And match each response == { status: 'sold' }
+match failed: EACH_EQUALS
+  $ | match each failed at index 0 (LIST:MAP)
+  [{"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":165,"category":{"id":65,"name":"Dog"},"name":"cat","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9223372016900014561,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"},{"id":9223372016900014635,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"},{"id":982129069,"name":"locust","status":"sold"}]
+  {"status":"sold"}
+
+    $[0] | not equal | actual has 5 more key(s) than expected - {"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}]} (MAP:MAP)
+    {"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"}
+    {"status":"sold"}
+
+
+classpath:examples/petstore/get_pet_by_status.feature:11
+00:28:09.166 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+00:28:10.975 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:28:11.420 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/22)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:28:12.134 [main] DEBUG com.intuit.karate - response time in milliseconds: 709
+1 < 200
+1 < Date: Thu, 29 Aug 2024 04:28:12 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":165,"category":{"id":65,"name":"Dog"},"name":"cat","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9223372016900014561,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"},{"id":9223372016900014635,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"},{"id":982129069,"name":"locust","status":"sold"},{"id":313162016,"name":"koala","status":"sold"}]
+
+00:28:12.230 [main] ERROR com.intuit.karate - classpath:examples/petstore/get_pet_by_status.feature:11
+And match each response == { status: 'sold' }
+match failed: EACH_EQUALS
+  $ | match each failed at index 0 (LIST:MAP)
+  [{"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":165,"category":{"id":65,"name":"Dog"},"name":"cat","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9223372016900014561,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"},{"id":9223372016900014635,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"},{"id":982129069,"name":"locust","status":"sold"},{"id":313162016,"name":"koala","status":"sold"}]
+  {"status":"sold"}
+
+    $[0] | not equal | actual has 5 more key(s) than expected - {"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}]} (MAP:MAP)
+    {"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"}
+    {"status":"sold"}
+
+
+classpath:examples/petstore/get_pet_by_status.feature:11
+00:30:01.819 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+00:30:03.670 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:30:04.133 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/22)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:30:04.861 [main] DEBUG com.intuit.karate - response time in milliseconds: 721
+1 < 200
+1 < Date: Thu, 29 Aug 2024 04:30:04 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900014408,"category":{"id":-12451059,"name":"pariatur"},"name":"doggie","photoUrls":["proident reprehenderit","aliqua nisi"],"tags":[{"id":-51074348,"name":"nisi nulla"},{"id":85662688,"name":"deserunt incididunt laboris"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":165,"category":{"id":65,"name":"Dog"},"name":"cat","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":9223372016900014561,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"},{"id":9223372016900014635,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"},{"id":982129069,"name":"locust","status":"sold"},{"id":313162016,"name":"koala","status":"sold"}]
+
+00:30:04.923 [main] INFO  com.intuit.karate - [print] [
+  {
+    "id": 9223372016900014408,
+    "category": {
+      "id": -12451059,
+      "name": "pariatur"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "proident reprehenderit",
+      "aliqua nisi"
+    ],
+    "tags": [
+      {
+        "id": -51074348,
+        "name": "nisi nulla"
+      },
+      {
+        "id": 85662688,
+        "name": "deserunt incididunt laboris"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 111111,
+    "category": {
+      "id": 11111,
+      "name": "string"
+    },
+    "name": "puppy",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 111,
+        "name": "string"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 165,
+    "category": {
+      "id": 65,
+      "name": "Dog"
+    },
+    "name": "cat",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "string"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 9223372016900014561,
+    "category": {
+      "id": 2299282,
+      "name": "officia d"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "veniam ad",
+      "consectetur laboris anim"
+    ],
+    "tags": [
+      {
+        "id": 6282852,
+        "name": "aliqua deserunt irure do Excepteur"
+      },
+      {
+        "id": -79344316,
+        "name": "dolor veniam non Ut"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 9223372016900014635,
+    "category": {
+      "id": 83089521,
+      "name": "aute"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "esse ea dese",
+      "proident sunt non"
+    ],
+    "tags": [
+      {
+        "id": -7333794,
+        "name": "deserunt reprehenderit"
+      },
+      {
+        "id": -49874740,
+        "name": "consequat aliqua magna officia"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 188,
+    "category": {
+      "id": 0,
+      "name": "doggie188"
+    },
+    "name": "doggieDC88",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "doggieDC88"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 982129069,
+    "name": "locust",
+    "status": "sold"
+  },
+  {
+    "id": 313162016,
+    "name": "koala",
+    "status": "sold"
+  }
+]
+ 
+20:22:54.117 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:23:01.811 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:23:04.646 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 143
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/22)
+1 > Accept-Encoding: gzip,deflate
+{"id":188,"category":{"id":0,"name":"string"},"name":"doggie188","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:23:06.959 [main] DEBUG com.intuit.karate - response time in milliseconds: 2303
+1 < 200
+1 < Date: Sun, 08 Sep 2024 00:23:06 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":188,"category":{"id":0,"name":"string"},"name":"doggie188","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:28:20.274 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:28:28.700 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:28:31.745 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 143
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/22)
+1 > Accept-Encoding: gzip,deflate
+{"id":188,"category":{"id":0,"name":"string"},"name":"doggie188","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:28:33.516 [main] DEBUG com.intuit.karate - response time in milliseconds: 1752
+1 < 200
+1 < Date: Sun, 08 Sep 2024 00:28:33 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":188,"category":{"id":0,"name":"string"},"name":"doggie188","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:47:03.326 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:47:11.837 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:47:14.123 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/188
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/22)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:47:16.354 [main] DEBUG com.intuit.karate - response time in milliseconds: 2215
+1 < 200
+1 < Date: Sun, 08 Sep 2024 00:47:16 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":188,"category":{"id":0,"name":"string"},"name":"doggie188","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+20:52:09.540 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:52:18.224 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:52:21.102 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 146
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/22)
+1 > Accept-Encoding: gzip,deflate
+{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"}
+
+20:52:23.300 [main] DEBUG com.intuit.karate - response time in milliseconds: 2175
+1 < 200
+1 < Date: Sun, 08 Sep 2024 00:52:23 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"}
+
+13:08:58.761 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+13:09:00.626 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:09:01.320 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 143
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/22)
+1 > Accept-Encoding: gzip,deflate
+{"id":188,"category":{"id":0,"name":"string"},"name":"doggie188","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+13:09:02.613 [main] DEBUG com.intuit.karate - response time in milliseconds: 1284
+1 < 200
+1 < Date: Sun, 08 Sep 2024 17:09:02 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":188,"category":{"id":0,"name":"string"},"name":"doggie188","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+13:09:03.885 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+13:09:03.946 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:09:03.955 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/22)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:09:04.252 [main] DEBUG com.intuit.karate - response time in milliseconds: 296
+1 < 200
+1 < Date: Sun, 08 Sep 2024 17:09:04 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900021397,"category":{"id":0,"name":"string"},"name":"doggie_new_pet","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":80908090,"category":{"id":1,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":1,"name":"string"},{"id":12,"name":"Tanvi"},{"id":123,"name":"test"},{"id":12345,"name":"testing"}],"status":"sold"},{"id":9223372016900021571,"category":{"id":0,"name":"string"},"name":"doggie_new_pet","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":21071990,"category":{"id":2,"name":"dog"},"name":"noKurtaparta","photoUrls":[],"tags":[],"status":"sold"},{"id":556,"category":{"id":123,"name":"string"},"name":"Luna556","photoUrls":["string"],"tags":[{"id":0,"name":"perro"}],"status":"sold"},{"id":557,"category":{"id":123,"name":"string"},"name":"Michim557","photoUrls":["string"],"tags":[{"id":0,"name":"perro"}],"status":"sold"},{"id":9223372016900022296,"category":{"id":97228344,"name":"est magna"},"name":"doggie","photoUrls":["commodo cupidatat anim","et elit anim"],"tags":[{"id":32742685,"name":"dolore dolor id"},{"id":-51765349,"name":"officia minim exercitation"}],"status":"sold"}]
+
+13:09:04.256 [main] INFO  com.intuit.karate - [print] [
+  {
+    "id": 9223372016900021397,
+    "category": {
+      "id": 0,
+      "name": "string"
+    },
+    "name": "doggie_new_pet",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "string"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 80908090,
+    "category": {
+      "id": 1,
+      "name": "string"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "string"
+      },
+      {
+        "id": 12,
+        "name": "Tanvi"
+      },
+      {
+        "id": 123,
+        "name": "test"
+      },
+      {
+        "id": 12345,
+        "name": "testing"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 9223372016900021571,
+    "category": {
+      "id": 0,
+      "name": "string"
+    },
+    "name": "doggie_new_pet",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "string"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 21071990,
+    "category": {
+      "id": 2,
+      "name": "dog"
+    },
+    "name": "noKurtaparta",
+    "photoUrls": [
+    ],
+    "tags": [
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 556,
+    "category": {
+      "id": 123,
+      "name": "string"
+    },
+    "name": "Luna556",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "perro"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 557,
+    "category": {
+      "id": 123,
+      "name": "string"
+    },
+    "name": "Michim557",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "perro"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 9223372016900022296,
+    "category": {
+      "id": 97228344,
+      "name": "est magna"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "commodo cupidatat anim",
+      "et elit anim"
+    ],
+    "tags": [
+      {
+        "id": 32742685,
+        "name": "dolore dolor id"
+      },
+      {
+        "id": -51765349,
+        "name": "officia minim exercitation"
+      }
+    ],
+    "status": "sold"
+  }
+]
+ 
+13:09:04.658 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+13:09:04.707 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:09:04.755 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/188
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/22)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:09:05.045 [main] DEBUG com.intuit.karate - response time in milliseconds: 289
+1 < 200
+1 < Date: Sun, 08 Sep 2024 17:09:04 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":188,"category":{"id":0,"name":"string"},"name":"doggie188","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}
+
+13:09:05.304 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+13:09:05.324 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:09:05.342 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 146
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/22)
+1 > Accept-Encoding: gzip,deflate
+{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"}
+
+13:09:05.661 [main] DEBUG com.intuit.karate - response time in milliseconds: 317
+1 < 200
+1 < Date: Sun, 08 Sep 2024 17:09:05 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":188,"category":{"id":0,"name":"doggie188"},"name":"doggieDC88","photoUrls":["string"],"tags":[{"id":0,"name":"doggieDC88"}],"status":"sold"}
+

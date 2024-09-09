@@ -1,0 +1,5 @@
+examples\petstore\GetPetByStatusRunner.class
+examples\petstore\AddPetRunner.class
+examples\petstore\GetPetRunner.class
+examples\petstore\UpdatePetRunner.class
+examples\ExamplesTest.class
